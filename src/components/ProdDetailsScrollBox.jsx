@@ -66,7 +66,7 @@ const ProdDetailsScrollBox = ({ gameId }) => {
 
   return (
     <>
-    <div className="scrollBox">
+    <div className="productScrollBox">
       {/* Left arrow button */}
       <button style = {{marginRight: "80px"}} className="nav-btn" onClick={scrollLeft}>
         <img src="/left.svg" alt="left arrow button" />

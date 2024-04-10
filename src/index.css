@@ -496,6 +496,13 @@ Because i did not want to effect the row of 3 smaller pics below it */
   margin-top: 50px;
 }
 
+.productScrollBox {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .gameStarPriceContainer{
   width: 1190px;
 
@@ -506,7 +513,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
   justify-content: space-between;
 }
 
-.star-rating-container {
+.starRatingContainer {
   width: 35%;
   padding:7px;
   align-self: start;
@@ -515,7 +522,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
   border-radius: 16px;
 }
 
-.game-price-container {
+.gamePriceContainer {
   width: 55%;
   display: flex;
   justify-content: end;
