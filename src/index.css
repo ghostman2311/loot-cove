@@ -597,7 +597,7 @@ text-justify:auto;
 
 .review{
   width:100%;
-  background-color: #f4d499;
+  background-color: #daecef;
   border: solid 8px #835211;
   border-radius: 16px;
   padding: 20px;
@@ -621,7 +621,7 @@ margin-top: 10px;
 .tag{
   width:auto;
   padding:5px;
-  background-color: #f4d499;
+  background-color: #c0c9eb;
   border: solid 8px #835211;
   border-radius: 7px;
   font-size: 20px;
