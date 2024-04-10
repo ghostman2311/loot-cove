@@ -3,7 +3,7 @@ import { getGameById } from '../data/api.js';
 import '../index.css';
 
 const ProdDetailsScrollBox = ({ gameId }) => {
-  
+
   // Using the useRef hook to reference the slider container
   const sliderRef = useRef(null);
  
@@ -16,10 +16,8 @@ const ProdDetailsScrollBox = ({ gameId }) => {
   // Initializing the images state to an empty array
   const [images, setImages] = useState([]);
 
-  // Using the useEffect hook to fetch game data and set images
-  useEffect(() => {
-    const fetchGame = async () => {
-      const game = await getGameById(gameId);
+  const fetchGame = async () => {
+      const game = getGameById(gameId); 
       if (game) {
         setImages([
           { id: game.id, url: game.pictures.thumbnail },
@@ -28,8 +26,10 @@ const ProdDetailsScrollBox = ({ gameId }) => {
           { id: game.id, url: game.pictures.image3 },
         ]);
       }
-    };
+  };
 
+  // Using the useEffect hook to fetch game data and set images
+  useEffect(() => {
     fetchGame();
   }, [gameId]);
 
@@ -74,7 +74,7 @@ const scrollLeft = () => {
   return (
     <div className="scrollBox">
       {/* Left arrow button */}
-      <button className="nav-btn" onClick={scrollLeft}>
+      <button style = {{marginRight: "80px"}} className="nav-btn" onClick={scrollLeft}>
         <img src="/left.svg" alt="left arrow button" />
       </button>
   
@@ -88,7 +88,7 @@ const scrollLeft = () => {
       </div>
   
       {/* Right arrow button */}
-      <button className="nav-btn" onClick={scrollRight}>
+      <button style = {{marginLeft: "80px"}} className="nav-btn" onClick={scrollRight}>
         <img src="/right.svg" alt="right arrow button" />
       </button>
     </div>
