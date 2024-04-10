@@ -3,7 +3,7 @@ import { getGameById } from '../data/api.js';
 import '../index.css';
 
 const ProdDetailsScrollBox = ({ gameId }) => {
-  
+
   // Using the useRef hook to reference the slider container
   const sliderRef = useRef(null);
  
@@ -16,10 +16,8 @@ const ProdDetailsScrollBox = ({ gameId }) => {
   // Initializing the images state to an empty array
   const [images, setImages] = useState([]);
 
-  // Using the useEffect hook to fetch game data and set images
-  useEffect(() => {
-    const fetchGame = async () => {
-      const game = await getGameById(gameId);
+  const fetchGame = async () => {
+      const game = getGameById(gameId); 
       if (game) {
         setImages([
           { id: game.id, url: game.pictures.thumbnail },
@@ -28,53 +26,49 @@ const ProdDetailsScrollBox = ({ gameId }) => {
           { id: game.id, url: game.pictures.image3 },
         ]);
       }
-    };
+  };
 
+  // Using the useEffect hook to fetch game data and set images
+  useEffect(() => {
     fetchGame();
   }, [gameId]);
 
   // Using the useEffect hook to scroll to the first image when the component mounts
   useEffect(() => {
     const container = sliderRef.current;
-    container.scrollLeft = 0; 
+    container.scrollLeft = window.innerWidth; ; 
   }, []);
 
-// Function to scroll to the left by a full screen width, will also loop back around to the last image when at the first image if the left arrow is clicked
-const scrollLeft = () => {
+  // Function to scroll to the left by a full screen width, will also loop back around to image 3 when at image 1 if the left arrow is clicked
+  const scrollLeft = () => {
     const container = sliderRef.current;
-    const scrollAmount = window.innerWidth;
-    setSelectedImage((prevSelectedImage) => {
-      if (prevSelectedImage === 1) {
-        container.scrollLeft = scrollAmount * (images.length - 1);
-        return images.length;
-      } else if (container.scrollLeft > 0) {
-        container.scrollLeft -= scrollAmount;
-        return prevSelectedImage - 1;
-      }
-      return prevSelectedImage;
-    });
-  };
-  
-  // Function to scroll to the right by a full screen width, will also loop back around to the first image when at the last image if right arrow is clicked
-  const scrollRight = () => {
-    const container = sliderRef.current;
-    const scrollAmount = window.innerWidth;
-    setSelectedImage((prevSelectedImage) => {
-      if (prevSelectedImage === images.length) {
-        container.scrollLeft = 0;
-        return 1;
-      } else if (container.scrollLeft + container.offsetWidth < container.scrollWidth) {
-        container.scrollLeft += scrollAmount;
-        return prevSelectedImage + 1;
-      }
-      return prevSelectedImage;
-    });
+    if (selectedImage === 1) {
+      container.scrollLeft = scrollAmount * (images.length - 1);
+      setSelectedImage(images.length);
+    } else if (container.scrollLeft > 0) {
+      container.scrollLeft -= scrollAmount;
+      setSelectedImage((prevSelectedImage) => prevSelectedImage - 1);
+    }
   };
 
+  // Function to scroll to the right by a full screen width, will also loop back around to image 1 when at image 3 if right arrow is clicked
+  const scrollRight = () => {
+    const container = sliderRef.current;
+    if (selectedImage === images.length) {
+      container.scrollLeft = 0;
+      setSelectedImage(1);
+    } else if (container.scrollLeft + container.offsetWidth < container.scrollWidth) {
+      container.scrollLeft += scrollAmount;
+      setSelectedImage((prevSelectedImage) => prevSelectedImage + 1);
+    }
+  };
+
+
   return (
-    <div className="scrollBox">
+    <>
+    <div className="productScrollBox">
       {/* Left arrow button */}
-      <button className="nav-btn" onClick={scrollLeft}>
+      <button style = {{marginRight: "80px"}} className="nav-btn" onClick={scrollLeft}>
         <img src="/left.svg" alt="left arrow button" />
       </button>
   
@@ -88,10 +82,18 @@ const scrollLeft = () => {
       </div>
   
       {/* Right arrow button */}
-      <button className="nav-btn" onClick={scrollRight}>
+      <button style = {{marginLeft: "80px"}} className="nav-btn" onClick={scrollRight}>
         <img src="/right.svg" alt="right arrow button" />
       </button>
+
     </div>
+    <div className="bar-container">
+        <div className={`barBox ${selectedImage === 1 ? 'active' : ''}`}></div>
+        <div className={`barBox ${selectedImage === 2 ? 'active' : ''}`} ></div>
+        <div className={`barBox ${selectedImage === 3 ? 'active' : ''}`}></div>
+        <div className={`barBox ${selectedImage === 4 ? 'active' : ''}`}></div>
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const BuyNowButton = ({ gameId }) => {
+const TagButton = ({text}) => {
   const navigation = useNavigate();
 
   const handleClick = () => {
@@ -12,10 +12,10 @@ const BuyNowButton = ({ gameId }) => {
   };
 
   return (
-    <button onClick={handleClick} className="gameBuyButton">
-      Buy Now
+    <button onClick={handleClick} className="tag">
+{text}
     </button>
   );
 };
 
-export default BuyNowButton;
+export default TagButton;

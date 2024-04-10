@@ -991,5 +991,6 @@ export const getGamesByIds = async (gameIds) => {
   gameIds.forEach((id) => {
     games.push(getGameById(id));
   });
+  console.log(games,"games here---->")
   return games;
 };

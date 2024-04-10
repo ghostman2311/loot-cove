@@ -1,8 +1,8 @@
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating,fontSize }) => {
     return (
       <div>
         {Array(5).fill().map((_, i) => (
-          <span key={i}>{i < rating ? '★' : '☆'}</span>
+          <span key={i} style={{fontSize:`${fontSize}px`}}>{i < rating ? '★' : '☆'}</span>
         ))}
       </div>
     );

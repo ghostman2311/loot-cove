@@ -491,17 +491,140 @@ Because i did not want to effect the row of 3 smaller pics below it */
   padding-top: 10px;
 }
 
-.star-rating-container {
-  width: 311px;
-  height: 134px;
-  align-self: start;
-  border: 1px solid #835211; /* Add border */
-  background-color: #F4D499; /* Add fill color */
+.productGameName{
+  font-size: 48px;
+  margin-top: 50px;
 }
 
-.game-price-container {
-  width: 142px;
-  height: 110px;
-  border: 1px solid #835211; /* Add border */
-  background-color: #F4D499; /* Add fill color */
+.productScrollBox {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.gameStarPriceContainer{
+  width: 1190px;
+
+  margin:auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.starRatingContainer {
+  width: 35%;
+  padding:7px;
+  align-self: start;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+}
+
+.gamePriceContainer {
+  width: 55%;
+  display: flex;
+  justify-content: end;
+  gap:30px;
+}
+
+.gameAmount{
+  width:25%;
+  padding:25px;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+}
+
+
+.gameBuyButton{
+  width:30%;
+  padding:25px;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+  font-size: 20px;
+  font-family: "MyFont";
+}
+
+.gameDescriptionContainer {
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+  width: 1190px;
+  height: auto;
+  margin: auto;
+  padding: 25px 40px;
+}
+
+.gameDetailContainer{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.gameDescription{
+text-justify:auto;
+}
+
+.gameReviewTagsContainer{
+  padding:50px 0;
+  width: 1190px;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;
+}
+.gameReviews{
+  width:60%;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+  text-align: start;
+  padding: 25px 40px;
+  min-height: 764px;
+}
+
+.gameTags{
+  width:39%;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+  text-align: start;
+  padding: 25px 40px;
+}
+
+.review{
+  width:100%;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 10px;
+
+}
+
+.userNameBox{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tagsWrap{
+width:100%;
+display: flex;
+flex-wrap: wrap;
+margin-top: 10px;
+}
+
+.tag{
+  width:auto;
+  padding:5px;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 7px;
+  font-size: 20px;
+  font-family: "MyFont";
+  margin: 5px;
 }
