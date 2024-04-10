@@ -1,0 +1,507 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("./fonts/TheRumIsGone-Wy1nG.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 1440px;
+  min-height: 1600px;
+  max-height: fit-content;
+  margin: auto;
+  background: linear-gradient(to bottom, #b1f4fc, #449faf);
+}
+body {
+  margin: 0;
+  font-family: "MyFont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #b1fcb5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Nav Bar stylings  */
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 125px;
+  align-items: center;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  font-size: 48px;
+  padding-left: 75px;
+}
+
+.genre {
+  font-size: 40px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.navBtns {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding-right: 60px;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #449faf;
+}
+
+.navBtns > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.navBtns > div > p {
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+/* Styles for Scroll box stylings */
+.fireSaleHead {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.scrollBox {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.fireSaleContainer {
+  display: flex;
+
+  overflow: scroll;
+  scroll-behavior: auto; /*set to auto because smooth seemed a bit choppy upon loading*/
+  height: 450px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.fireSaleImage {
+  width: 1440px;
+  height: 450px;
+}
+
+.nav-btn {
+  cursor: pointer;
+  background-color: #f4d499;
+  border-radius: 16px;
+  border: solid 5px #835211;
+  height: 450px;
+  width: 100px;
+}
+
+.fireSaleContainer::-webkit-scrollbar {
+  display: none; /* hides the scroll bar*/
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 590px;
+  height: auto;
+  background-color: #835211;
+  border: solid 5px black;
+  margin-left: 425px;
+  margin-top: 25px;
+  border-radius: 24px;
+}
+
+.barBox {
+  width: 160px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 16px;
+  border: solid 5px black;
+}
+.barBox.active {
+  background-color: green;
+}
+/* Stylings for the trending now component */
+
+.trendingHead {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.trendingContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  border-radius: 16px;
+  width: 1190px;
+  height: 670px;
+  margin: auto;
+}
+
+/* biggest pic in the trending now component */
+.mainTrendGame {
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  width: 1030px;
+  height: 340px;
+}
+
+.mainTrendGame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: solid 5px black;
+  border-radius: 16px;
+}
+
+/* the row of 3 games in the trending component */
+
+.threeTrendGameBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  width: 1030px;
+  height: 165px;
+}
+
+.threeTrendGameImages {
+  width: 300px;
+  height: 165px;
+}
+
+.threeTrendGameImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: solid 5px black;
+  border-radius: 16px;
+}
+
+.mainTrendGame,
+.threeTrendGameImages {
+  position: relative;
+}
+
+/* set the font size for the biggest picture individually, instead of all 
+Because i did not want to effect the row of 3 smaller pics below it */
+.mainTrendGame .gameName,
+.mainTrendGame .gamePrice,
+.mainTrendGame .gameDev {
+  font-size: 36px;
+}
+
+.gameName {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  color: white;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.gamePrice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.gameDev {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* GameByGenre component stylings */
+
+.sort {
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.sortedGamesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+
+.gamesImgContainer img {
+  width: 300px;
+  height: 165px;
+  object-fit: cover;
+  border: solid 5px black;
+  border-radius: 16px;
+  background: #835211;
+}
+
+.gamesImgContainer {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.sortedGamePrice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border-top-right-radius: 16px;
+}
+
+.sortedGameName {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-bottom: 10px;
+}
+
+.sortBtn {
+  cursor: pointer;
+  background-color: #f4d499;
+  border-radius: 16px;
+  border: solid 8px #835211;
+  height: 80px;
+  width: 300px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+  .cart {
+    width: 700px;
+
+    background-color: #f4d499;
+    border: 3px solid #835211;
+    border-radius: 16px;
+  }
+
+  .cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .cartItem .title {
+    width: 250px;
+    text-align: left;
+  }
+
+  .cartItem .delete {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+  }
+
+  .price {
+    align-self: center;
+  }
+
+  .total {
+    justify-self: right;
+  }
+
+  .cartHolder {
+    display: flex;
+  }
+
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #f4d499;
+    border: 3px solid #835211;
+    border-radius: 16px;
+    margin-left: 10px;
+  }
+
+  .checkItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkoutInput {
+    width: 300px;
+    height: 20px;
+    border: 3px solid #835211;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .checkoutLabel {
+    font-size: 10pt;
+    width: 300px;
+  }
+
+  .checkoutPost {
+    border: 3px solid #835211;
+    border-radius: 16px;
+    margin-left: 10px;
+    text-align: center;
+    height: 20px;
+    width: 120px;
+  }
+  .checkoutPostLabel {
+    font-size: 10pt;
+    margin-right: 40px;
+  }
+
+  .checkoutDate {
+    border: 3px solid #835211;
+    border-radius: 16px;
+    margin-left: 20px;
+    text-align: center;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .checkoutDateLabel {
+    font-size: 10pt;
+    margin-right: 20px;
+  }
+
+  .checkoutCCV {
+    border: 3px solid #835211;
+    border-radius: 16px;
+    margin-left: 20px;
+    text-align: center;
+    height: 20px;
+    width: 120px;
+  }
+
+  .checkoutCCVLabel {
+    font-size: 10pt;
+    margin-right: 110px;
+  }
+
+  .checkBtn {
+    border: 3px solid #835211;
+    background-color: #b1fcb5;
+    border-radius: 16px;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-family: "pirate";
+    cursor: pointer;
+  }
+
+  /* Product Details Nav Bar stylings */
+.productDetailsNav {
+  display: flex;
+  justify-content: space-between;
+  height: 125px;
+  align-items: center;
+  background-color: #f4d499;
+  border: solid 8px #835211;
+  font-size: 48px;
+  padding-left: 75px;
+}
+
+.productDetailsGenre {
+  font-size: 40px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.productDetailsNavBtns {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding-right: 60px;
+}
+
+.productDetailsNav a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.productDetailsNav a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.productDetailsNav a:hover {
+  text-decoration: none;
+  color: #449faf;
+}
+
+.productDetailsNavBtns > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.productDetailsNavBtns > div > p {
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.star-rating-container {
+  width: 311px;
+  height: 134px;
+  align-self: start;
+  border: 1px solid #835211; /* Add border */
+  background-color: #F4D499; /* Add fill color */
+}
+
+.game-price-container {
+  width: 142px;
+  height: 110px;
+  border: 1px solid #835211; /* Add border */
+  background-color: #F4D499; /* Add fill color */
+}
