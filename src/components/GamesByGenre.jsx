@@ -5,14 +5,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getGames } from '../data/api';
+import { useGenre } from '../context/genre';
 
 
 const GamesByGenre = () => {
+  const { selectedGenre,setSelectedGenre } = useGenre();
   // State for games
   const [games, setGames] = useState([]);
   
   // State for selected genre
-  const [selectedGenre, setSelectedGenre] = useState(null);
+  // const [selectedGenre, setSelectedGenre] = useState(null);
 
   // Array of genres, to be used in the drop down menu to select a genre
   const genres = ['Survival Horror', 'Horror', 'Strategy', 'Simulation', 'Action', 'Role-Playing', 'Sports'];
@@ -38,7 +40,7 @@ const GamesByGenre = () => {
   // Function to handle sorting games by genre
   const handleSort = (event) => {
     // Update the selectedGenre state with the selected value from drop down menu
-    setSelectedGenre(event.target.value); 
+    // setSelectedGenre(event.target.value); 
   };
 
   return (
