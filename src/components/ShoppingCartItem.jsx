@@ -1,6 +1,8 @@
 import { GiSwordClash } from "react-icons/gi";
+import { useCart } from "../context/cart";
 
-const ShoppingCartItem = ({ id, name, price, onClick }) => {
+const ShoppingCartItem = ({ id, name, price }) => {
+  const { removeFromCart } = useCart();
   return (
     <div className="cartItem">
       <h3 className="title">{name}</h3>
@@ -11,7 +13,7 @@ const ShoppingCartItem = ({ id, name, price, onClick }) => {
           color: "red",
           cursor: "pointer",
         }}
-        onClick={() => onClick(id)}
+        onClick={() => removeFromCart(id)}
       />
     </div>
   );

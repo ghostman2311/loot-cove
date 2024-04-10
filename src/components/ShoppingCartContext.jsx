@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
-import { getGamesByIds } from "../data/api";
 import ShoppingCartItem from "./ShoppingCartItem";
+import { useCart } from "../context/cart";
 
-const ShoppingCartContext = ({ cartById, onClick }) => {
-  let [cart, setCart] = useState([]);
-  let [total, setTotal] = useState(0);
+const ShoppingCartContext = () => {
+  const { cart } = useCart();
 
-  useEffect(() => {
-    const gamesToCart = async () => {
-      cartById.sort();
-      let games = await getGamesByIds(cartById);
-      setCart(games);
-      return games; // Return the games array
-    };
-
-    const updateTotal = async () => {
-      let temp = 0;
-      let games = await gamesToCart(); // Get the games array from gamesToCart
-      for (let game of games) { // Use the games array directly
-        temp += parseFloat(game.price);
-      }
-      setTotal(temp);
-    };
-
-    updateTotal();
-  }, [cartById]); // Changed from cart to cartById
+  const total = cart.reduce((acc, game) => {
+    acc += +game.price;
+    return acc;
+  }, 0);
 
   return (
     <>
@@ -34,7 +17,6 @@ const ShoppingCartContext = ({ cartById, onClick }) => {
             id={game.id}
             name={game.name}
             price={game.price}
-            onClick={onClick}
           />
         ))}
       </div>

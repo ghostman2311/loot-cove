@@ -97,8 +97,7 @@ nav a:hover {
 
 .fireSaleContainer {
   display: flex;
-
-  overflow: scroll;
+  overflow: hidden;
   scroll-behavior: auto; /*set to auto because smooth seemed a bit choppy upon loading*/
   height: 450px;
 
@@ -318,128 +317,128 @@ Because i did not want to effect the row of 3 smaller pics below it */
   margin-top: 20px;
   font-weight: bold;
 }
-  .cart {
-    width: 700px;
+.cart {
+  width: 700px;
 
-    background-color: #f4d499;
-    border: 3px solid #835211;
-    border-radius: 16px;
-  }
+  background-color: #f4d499;
+  border: 3px solid #835211;
+  border-radius: 16px;
+}
 
-  .cartItem {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
-  .cartItem .title {
-    width: 250px;
-    text-align: left;
-  }
+.cartItem .title {
+  width: 250px;
+  text-align: left;
+}
 
-  .cartItem .delete {
-    align-self: center;
-    width: 25px;
-    height: 25px;
-    padding-right: 10px;
-  }
+.cartItem .delete {
+  align-self: center;
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
+}
 
-  .price {
-    align-self: center;
-  }
+.price {
+  align-self: center;
+}
 
-  .total {
-    justify-self: right;
-  }
+.total {
+  justify-self: right;
+}
 
-  .cartHolder {
-    display: flex;
-  }
+.cartHolder {
+  display: flex;
+}
 
-  .checkout {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    background-color: #f4d499;
-    border: 3px solid #835211;
-    border-radius: 16px;
-    margin-left: 10px;
-  }
+.checkout {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: #f4d499;
+  border: 3px solid #835211;
+  border-radius: 16px;
+  margin-left: 10px;
+}
 
-  .checkItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.checkItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .checkoutInput {
-    width: 300px;
-    height: 20px;
-    border: 3px solid #835211;
-    border-radius: 16px;
-    text-align: center;
-  }
+.checkoutInput {
+  width: 300px;
+  height: 20px;
+  border: 3px solid #835211;
+  border-radius: 16px;
+  text-align: center;
+}
 
-  .checkoutLabel {
-    font-size: 10pt;
-    width: 300px;
-  }
+.checkoutLabel {
+  font-size: 10pt;
+  width: 300px;
+}
 
-  .checkoutPost {
-    border: 3px solid #835211;
-    border-radius: 16px;
-    margin-left: 10px;
-    text-align: center;
-    height: 20px;
-    width: 120px;
-  }
-  .checkoutPostLabel {
-    font-size: 10pt;
-    margin-right: 40px;
-  }
+.checkoutPost {
+  border: 3px solid #835211;
+  border-radius: 16px;
+  margin-left: 10px;
+  text-align: center;
+  height: 20px;
+  width: 120px;
+}
+.checkoutPostLabel {
+  font-size: 10pt;
+  margin-right: 40px;
+}
 
-  .checkoutDate {
-    border: 3px solid #835211;
-    border-radius: 16px;
-    margin-left: 20px;
-    text-align: center;
-    height: 20px;
-    cursor: pointer;
-  }
+.checkoutDate {
+  border: 3px solid #835211;
+  border-radius: 16px;
+  margin-left: 20px;
+  text-align: center;
+  height: 20px;
+  cursor: pointer;
+}
 
-  .checkoutDateLabel {
-    font-size: 10pt;
-    margin-right: 20px;
-  }
+.checkoutDateLabel {
+  font-size: 10pt;
+  margin-right: 20px;
+}
 
-  .checkoutCCV {
-    border: 3px solid #835211;
-    border-radius: 16px;
-    margin-left: 20px;
-    text-align: center;
-    height: 20px;
-    width: 120px;
-  }
+.checkoutCCV {
+  border: 3px solid #835211;
+  border-radius: 16px;
+  margin-left: 20px;
+  text-align: center;
+  height: 20px;
+  width: 120px;
+}
 
-  .checkoutCCVLabel {
-    font-size: 10pt;
-    margin-right: 110px;
-  }
+.checkoutCCVLabel {
+  font-size: 10pt;
+  margin-right: 110px;
+}
 
-  .checkBtn {
-    border: 3px solid #835211;
-    background-color: #b1fcb5;
-    border-radius: 16px;
-    width: 200px;
-    height: 30px;
-    margin-bottom: 20px;
-    font-family: "pirate";
-    cursor: pointer;
-  }
+.checkBtn {
+  border: 3px solid #835211;
+  background-color: #b1fcb5;
+  border-radius: 16px;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 20px;
+  font-family: "pirate";
+  cursor: pointer;
+}
 
-  /* Product Details Nav Bar stylings */
+/* Product Details Nav Bar stylings */
 .productDetailsNav {
   display: flex;
   justify-content: space-between;
@@ -491,7 +490,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
   padding-top: 10px;
 }
 
-.productGameName{
+.productGameName {
   font-size: 48px;
   margin-top: 50px;
 }
@@ -503,10 +502,10 @@ Because i did not want to effect the row of 3 smaller pics below it */
   margin-top: 10px;
 }
 
-.gameStarPriceContainer{
+.gameStarPriceContainer {
   width: 1190px;
 
-  margin:auto;
+  margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
@@ -515,7 +514,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
 
 .starRatingContainer {
   width: 35%;
-  padding:7px;
+  padding: 7px;
   align-self: start;
   background-color: #f4d499;
   border: solid 5px #835211;
@@ -526,26 +525,26 @@ Because i did not want to effect the row of 3 smaller pics below it */
   width: 55%;
   display: flex;
   justify-content: end;
-  gap:30px;
+  gap: 30px;
 }
 
-.gameAmount{
-  width:25%;
-  padding:25px;
+.gameAmount {
+  width: 25%;
+  padding: 25px;
   background-color: #f4d499;
   border: solid 5px #835211;
   border-radius: 16px;
 }
 
-
-.gameBuyButton{
-  width:30%;
-  padding:25px;
+.gameBuyButton {
+  width: 30%;
+  padding: 25px;
   background-color: #f4d499;
   border: solid 5px #835211;
   border-radius: 16px;
   font-size: 20px;
   font-family: "MyFont";
+  cursor: pointer;
 }
 
 .gameDescriptionContainer {
@@ -558,26 +557,26 @@ Because i did not want to effect the row of 3 smaller pics below it */
   padding: 25px 40px;
 }
 
-.gameDetailContainer{
-  width:100%;
+.gameDetailContainer {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
 }
 
-.gameDescription{
-text-justify:auto;
+.gameDescription {
+  text-justify: auto;
 }
 
-.gameReviewTagsContainer{
-  padding:50px 0;
+.gameReviewTagsContainer {
+  padding: 50px 0;
   width: 1190px;
-  margin:auto;
+  margin: auto;
   display: flex;
   justify-content: space-between;
 }
-.gameReviews{
-  width:60%;
+.gameReviews {
+  width: 60%;
   background-color: #f4d499;
   border: solid 5px #835211;
   border-radius: 16px;
@@ -586,8 +585,8 @@ text-justify:auto;
   min-height: 764px;
 }
 
-.gameTags{
-  width:39%;
+.gameTags {
+  width: 39%;
   background-color: #f4d499;
   border: solid 5px #835211;
   border-radius: 16px;
@@ -595,33 +594,32 @@ text-justify:auto;
   padding: 25px 40px;
 }
 
-.review{
-  width:100%;
+.review {
+  width: 100%;
   background-color: #daecef;
   border: solid 5px #835211;
   border-radius: 16px;
   padding: 20px;
   margin-top: 10px;
-
 }
 
-.userNameBox{
+.userNameBox {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.tagsWrap{
-width:100%;
-display: flex;
-flex-wrap: wrap;
-margin-top: 10px;
+.tagsWrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-.tag{
+.tag {
   cursor: pointer;
-  width:auto;
-  padding:5px;
+  width: auto;
+  padding: 5px;
   background-color: #c0c9eb;
   border: solid 5px #835211;
   border-radius: 7px;
