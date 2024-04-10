@@ -12,7 +12,6 @@ import GameReview from "./GameReview";
 const ProductDetails = () => {
   const { id } = useParams();
   const game = games.find((game) => game.id === +id);
-  console.log(game);
 
   // Calculate average rating
   const averageRating = game
