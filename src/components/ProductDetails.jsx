@@ -19,7 +19,7 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <h1 className="productGameName">{game.name}</h1>
+      <h1 className="productGameName">{game?.name}</h1>
       <ProdDetailsScrollBox gameId={game?.id} />
       {/* game price and start Block */}
       <div className="gameStarPriceContainer">
@@ -29,7 +29,7 @@ const ProductDetails = () => {
         </div>
         <div className="gamePriceContainer">
           <div className="gameAmount">
-            <h2>${game.price}</h2>
+            <h2>${game?.price}</h2>
           </div>
           <BuyNowButton gameId={id} />
         </div>
