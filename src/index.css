@@ -446,7 +446,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
   height: 125px;
   align-items: center;
   background-color: #f4d499;
-  border: solid 8px #835211;
+  border: solid 5px #835211;
   font-size: 48px;
   padding-left: 75px;
 }
@@ -518,7 +518,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
   padding:7px;
   align-self: start;
   background-color: #f4d499;
-  border: solid 8px #835211;
+  border: solid 5px #835211;
   border-radius: 16px;
 }
 
@@ -533,7 +533,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
   width:25%;
   padding:25px;
   background-color: #f4d499;
-  border: solid 8px #835211;
+  border: solid 5px #835211;
   border-radius: 16px;
 }
 
@@ -542,7 +542,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
   width:30%;
   padding:25px;
   background-color: #f4d499;
-  border: solid 8px #835211;
+  border: solid 5px #835211;
   border-radius: 16px;
   font-size: 20px;
   font-family: "MyFont";
@@ -550,7 +550,7 @@ Because i did not want to effect the row of 3 smaller pics below it */
 
 .gameDescriptionContainer {
   background-color: #f4d499;
-  border: solid 8px #835211;
+  border: solid 5px #835211;
   border-radius: 16px;
   width: 1190px;
   height: auto;
@@ -579,7 +579,7 @@ text-justify:auto;
 .gameReviews{
   width:60%;
   background-color: #f4d499;
-  border: solid 8px #835211;
+  border: solid 5px #835211;
   border-radius: 16px;
   text-align: start;
   padding: 25px 40px;
@@ -589,7 +589,7 @@ text-justify:auto;
 .gameTags{
   width:39%;
   background-color: #f4d499;
-  border: solid 8px #835211;
+  border: solid 5px #835211;
   border-radius: 16px;
   text-align: start;
   padding: 25px 40px;
@@ -597,8 +597,8 @@ text-justify:auto;
 
 .review{
   width:100%;
-  background-color: #f4d499;
-  border: solid 8px #835211;
+  background-color: #daecef;
+  border: solid 5px #835211;
   border-radius: 16px;
   padding: 20px;
   margin-top: 10px;
@@ -619,10 +619,11 @@ margin-top: 10px;
 }
 
 .tag{
+  cursor: pointer;
   width:auto;
   padding:5px;
-  background-color: #f4d499;
-  border: solid 8px #835211;
+  background-color: #c0c9eb;
+  border: solid 5px #835211;
   border-radius: 7px;
   font-size: 20px;
   font-family: "MyFont";
