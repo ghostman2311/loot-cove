@@ -29,7 +29,7 @@ const ProductDetails = () => {
         {/* game price and start Block */}
         <div className="gameStarPriceContainer">
           <div className="star-rating-container">
-            <StarRating rating={averageRating} />{" "}
+            <StarRating rating={averageRating} fontSize="50"/>
             {/* Pass average rating as prop */}
           </div>
           <div className="game-price-container">

@@ -72,6 +72,7 @@ const scrollLeft = () => {
   };
 
   return (
+    <>
     <div className="scrollBox">
       {/* Left arrow button */}
       <button style = {{marginRight: "80px"}} className="nav-btn" onClick={scrollLeft}>
@@ -91,7 +92,15 @@ const scrollLeft = () => {
       <button style = {{marginLeft: "80px"}} className="nav-btn" onClick={scrollRight}>
         <img src="/right.svg" alt="right arrow button" />
       </button>
+
     </div>
+    <div className="bar-container">
+        <div className={`barBox ${selectedImage === 1 ? 'active' : ''}`}></div>
+        <div className={`barBox ${selectedImage === 2 ? 'active' : ''}`} ></div>
+        <div className={`barBox ${selectedImage === 3 ? 'active' : ''}`}></div>
+        <div className={`barBox ${selectedImage === 4 ? 'active' : ''}`}></div>
+      </div>
+    </>
   );
 };
 

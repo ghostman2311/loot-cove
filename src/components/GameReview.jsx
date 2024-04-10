@@ -7,7 +7,7 @@ const GameReview = ({review }) => {
     <div className="userNameBox">
       <h3>{review?.user}</h3>
       <div>
-        <StarRating rating={review?.rating} />
+        <StarRating rating={review?.rating} fontSize="24" />
       </div>
     </div>
     <div>
